@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.company.UNITY_PACKAGE_NAME">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+            android:name="com.company.UNITY_PACKAGE_NAME.GlobalApplication"
+            android:usesCleartextTraffic="true">
+            <meta-data
+                       android:name="com.kakao.sdk.AppKey"
+                       android:value="KAKAO_NATIVE_KEY" />
+
+    <!-- ✅ GameActivity 엔트리 포인트 -->
+    <activity
+        android:name="com.unity3d.player.UnityPlayerGameActivity"
+        android:enabled="true"
+        tools:replace="android:enabled"
+        android:exported="true"
+        android:launchMode="singleTask"
+        android:screenOrientation="portrait"
+        android:hardwareAccelerated="true"
+        android:theme="@style/BaseUnityGameActivityTheme"
+        android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+        tools:node="replace">
+
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      
+     
+      <!-- GameActivity/Activity 공통으로 쓰는 메타데이터 -->
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+      <!-- GameActivity는 네이티브 lib 이름 명시 (Unity 기본은 'game') -->
+      <meta-data android:name="android.app.lib_name" android:value="game" />
+    </activity>
+
+<activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="oauth"
+                    android:scheme="kakaoKAKAO_NATIVE_KEY" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.kakao.sdk.auth.CustomTabLauncherActivity"
+            android:exported="false"
+            android:launchMode="singleTask" />
+
+
+
+  </application>
+</manifest>

@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "522417289987",
+    "project_id": "iwanttoknowmyfuture",
+    "storage_bucket": "iwanttoknowmyfuture.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522417289987:android:ec421f06eac50cb1a18736",
+        "android_client_info": {
+          "package_name": "com.company.IwantToKnowMyFuture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "522417289987-5nr7cgkirg2pphi36g1q9nli7o35vlj2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.company.IwantToKnowMyFuture",
+            "certificate_hash": "40d70ad8a4bd3e9d43e222e4994310e2dc1c3ff7"
+          }
+        },
+        {
+          "client_id": "522417289987-00rhecna8cougv343j7mmq2q5scv08a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAomrWtOxPjz3vlB9EOO9VSA3O1bUbjA1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "522417289987-00rhecna8cougv343j7mmq2q5scv08a7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "522417289987-ut1tmav94u3dl8jl34plsovbvf67vpfd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.company.IwantToKnowMyFuture"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
